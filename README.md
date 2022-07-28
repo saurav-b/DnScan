@@ -1,5 +1,4 @@
 # DnScan
-# Readme
 
 This repository contains small scripts created during penetration tests for various things, that may be useful to other people.
 
