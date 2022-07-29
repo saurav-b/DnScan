@@ -1,16 +1,15 @@
 # DnScan
 
-This repository contains small scripts created during penetration tests for various things, that may be useful to other people.
+This package contains minor scripts written during penetration tests for a variety of purposes that may be valuable to others.
 
-These scripts have generally been written quickly and are unlikely to have proper error handling, or to have been thoroughly tested.
+These scripts were most likely developed rapidly and have not been extensively tested or have sufficient error handling.
 
-Use at your own risk.
 
 # Scripts
 
 ## [aspnet_identity_v2_to_john.py](aspnet_identity_v2_to_john.py)
 
-Convert ASP.NET Identity v2 hashes into a format that can be cracked with John. Hashes can be extract with the following SQL query:
+Convert ASP.NET Identity v2 hashes into a format that can be cracked with John. The following SQL query may be used to obtain hashes:
 
 ```sql
 SELECT CONCAT(UserName, ':', PasswordHash) FROM AspNetUsers
@@ -22,13 +21,13 @@ Takes the output from `dbscan` or `ldapsearch` and extracts usernames and passwo
 
 ## [parse_pwdump_admins.py](parse_pwdump_admins.py)
 
-Takes the output of [NtdsAudit](https://github.com/Dionach/NtdsAudit) and parses it into a CSV file that shows which *enabled* users belong to which privileged groups.
+Takes the output of [NtdsAudit](https://github.com/Dionach/NtdsAudit) and parses it and generates a CSV file indicating which *assisted* users belong toward which authorized groups.
 
-## [sourcescan.py](sourcescan.py)
+## [dnscan.py](dnscan.py)
 
-A quick TCP port scanner that lets you specify a range of source ports to scan from.
+A swift TCP port analyzer that allows you to define a spectrum of source ports from which to search.
 
-Useful for identifying firewall rules that allow traffic from specific ports (such as 53 or 179).
+This is useful for determining firewall rules that permit traffic from specified ports (such as 53 or 179).
 
-The lists of source and target ports are defined inside the script in the `__main__` function.
+The source and destination port lists are defined within the code in the '__main__' function.
 
