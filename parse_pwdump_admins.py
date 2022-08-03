@@ -47,6 +47,4 @@ with io.open(filename, encoding="utf8", errors='replace') as userfile:
             if isadmin:
                 admins[user] = [administrator, domainadmin, enterpriseadmin]
 
-print("Username,Administrator,Domain Admin,Enterprise Admin")
-for user,data in sorted(admins.items(), key=lambda s: s[0].lower()):
-    print(user +  "," + data[0] + "," + data[1] + "," + data[2])
+
